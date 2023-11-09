@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tutorial-google",
+    "name": "clear",
     "slug": "tutorial-google",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,10 +21,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.saravanange.tutorialgoogle"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "scheme": "SaraFirstAPP"
   }
 }
