@@ -13,6 +13,7 @@ export default function App() {
   const [request, response, promptAsync] = Google.useAuthRequest({
     androidClientId: '1038184132515-e4ps35i7kpjoeeo9gs89ma3atae87oko.apps.googleusercontent.com',
     webClientId: '1038184132515-a7fhdhsv7vm76l4ml1j2gbvjmfja49ju.apps.googleusercontent.com',
+    iosClientId:'1038184132515-uqmf3pjeqmkbmplm8dvco8l8c4av42c6.apps.googleusercontent.com'
   });
 
   useEffect(() => {
