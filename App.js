@@ -21,10 +21,13 @@ export default function App() {
   }, [response, token]);
 
   async function handleEffect() {
+    console.log('Entering handle effect ');
     const user = await getLocalUser();
     console.log('user', user);
     if (!user) {
-      console.log('user --1', user);
+     // console.log('user --response?.type ---->', response?.type);
+     console.log('user --response.authentication.accessToken --request-->',request);
+      console.log('user --response.authentication.accessToken --response-->',response);
       if (response?.type === 'success') {
         console.log('user --2', user);
         setToken(response.authentication.accessToken);
@@ -38,6 +41,7 @@ export default function App() {
   }
 
   const getLocalUser = async () => {
+    console.log('entering local user info');
     try {
       const user = await AsyncStorage.getItem('@user');
       if (!user) return null;
@@ -49,6 +53,7 @@ export default function App() {
   };
 
   const getUserInfo = async (token) => {
+    console.log("getUserInfo...");
     if (!token) return;
     try {
       const response = await fetch('https://www.googleapis.com/userinfo/v2/me', {
